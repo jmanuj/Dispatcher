@@ -1,4 +1,6 @@
-approach 1
+hash map approach
+
+conjunctions of disjunctions 
 
 use a hashmap for predicates and events
 predicate :
