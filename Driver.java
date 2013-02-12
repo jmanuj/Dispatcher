@@ -17,9 +17,11 @@ public class Driver {
 			dispatcher.registerSubscriber("234", pred2);
 			dispatcher.registerSubscriber("234", pred3);
 			
-			String[] event = {"in", "blah", "wsj.com"};
+			String[] event = {"in", "blah", "wsj.com"};	//match
+			String[] event1 = {"hk", "news.php"};		//no match
 			
 			System.out.println(dispatcher.findMatchingIds(event));
+			System.out.println(dispatcher.findMatchingIds(event1));
 			
 		} catch(Exception e) {
 			System.out.println("ex: " + e.getMessage());
