@@ -26,6 +26,18 @@ public class HashMapDispatcher implements IDispatcher {
 		 * input format:
 		 * (c1 == "in") && (c2 == "home.php" || c2 == "news.php") && (c3 == "nytimes.com" || c3 == "wsj.com")
 		 * conjucntion of disjunctions of literals (predicates)
+		 * 
+		 * output format: a hashmap
+		 * example:
+		 * c1 => ["in", "hk"],
+		 * c3 => ["home.php"],
+		 * c4 => ["nytimes.com", "wsj.com"]
+		 * c7 => ["6342"]
+		 * ...
+		 * 
+		 * && between hashmap entries
+		 * || between hashmap value list entries
+		 * 
 		 */
 		
 		Map<String, List<String>> map = new HashMap<String, List<String>>();
