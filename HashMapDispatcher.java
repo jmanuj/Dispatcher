@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class HashMapDispatcher implements IDispatcher {
 
 	/**
-	 * max columns in an event
+	 * dafault columns in an event
 	 */
 	private int maxEventCols = 2;
 	
