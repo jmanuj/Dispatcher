@@ -150,8 +150,4 @@ public class HashMapDispatcher implements IDispatcher {
 		
 		return matchingSubscriberIds;
 	}
-
-	public void printTest() {
-		System.out.println(subscriberPredicates.toString());
-	}
 }

@@ -8,17 +8,18 @@ public class Driver {
 	public static void main(String[] args) {
 		IDispatcher dispatcher = new HashMapDispatcher(3);
 		
-		String pred = "(c1 == \"in\") && (c2 == \"home.php\" || c2 ==\"news.php\") && (c3 == \"huffpost.com\")";
+		String pred = "(c1 == \"in\") && (c2 == \"home.php\" || c2 ==\"news1.php\") && (c3 == \"huffpost.com\")";
 		
 		try {
 			
-			dispatcher.registerSubscriber("123", pred);
+			dispatcher.registerSubscriber("12345", pred);
 			
-			String[] event = {"in", "blah", "wsj.com"};	//match
-			String[] event1 = {"in", "news.php", "huffpost.com"};		//no match
-			
+			String[] event = {"in", "news.php", "huffpost.com"};		//no match
+			long start = System.currentTimeMillis();
 			System.out.println(dispatcher.findMatchingIds(event));
-			System.out.println(dispatcher.findMatchingIds(event1));
+			long end = System.currentTimeMillis();
+			
+			System.out.println(end - start);
 		} catch(Exception e) {
 			System.out.println("ex: " + e.getMessage());
 		}
