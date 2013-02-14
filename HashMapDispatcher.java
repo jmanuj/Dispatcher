@@ -55,7 +55,7 @@ public class HashMapDispatcher implements IDispatcher {
 					Matcher m = pattern.matcher(kv[0]);
 					if(m.matches()) {
 						int clauseKeyNumber = Integer.parseInt(m.group(1)); 
-						if(clauseKeyNumber > this.maxEventCols && clauseKeyNumber <= 0) {
+						if(clauseKeyNumber > this.maxEventCols || clauseKeyNumber <= 0) {
 							throw new Exception("Invalid predicate clause key numbering");
 						} else {
 							if(!map.containsKey(kv[0])) {
