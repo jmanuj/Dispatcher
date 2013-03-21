@@ -1,4 +1,4 @@
-package qubole.Dispatcher;
+package Dispatcher;
 
 import java.util.List;
 
